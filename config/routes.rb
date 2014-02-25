@@ -7,6 +7,7 @@ Kebu::Application.routes.draw do
   root 'users#account'
 
   get 'account' => 'users#account'
+  
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
