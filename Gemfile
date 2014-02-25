@@ -10,7 +10,7 @@ group :development do
 end
 
 
-"access managment"
+#access managment"
 gem 'pundit'
 
 #Authentification
