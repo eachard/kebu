@@ -12,6 +12,9 @@ end
 #Authentification
 gem 'devise'
 
+#picture managment
+gem 'paperclip'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
