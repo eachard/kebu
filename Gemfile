@@ -9,6 +9,10 @@ group :development do
   gem 'pry'
 end
 
+
+"access managment"
+gem 'pundit'
+
 #Authentification
 gem 'devise'
 

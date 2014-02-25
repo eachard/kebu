@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   def account
-    @current_user = "Fred"
+    @name = "laurent"
   end
   
 end
