@@ -1,5 +1,17 @@
 source 'https://rubygems.org'
 
+
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+  gem 'quiet_assets'
+  gem 'pry-rails'
+  gem 'pry'
+end
+
+#Authentification
+gem 'devise'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
