@@ -11,3 +11,43 @@
  *= require_self
  *= require_tree .
  */
+
+
+
+.navbar-default {
+ background-color: #013F58;
+}
+
+/*.navbar-nav {
+padding-top: 25px;
+padding-bottom: 5px;
+}*/
+
+.navbar-default .navbar-nav>li>a {
+color: #FFFFFF;
+}
+.navbar-nav>.open>a:hover{
+	color: #FFFFFF;
+	}
+
+
+.dropdown-menu {
+	background color: #FFFFFF;
+	color: #013F58;
+}
+
+.navbar-nav>li>a:hover{
+	color: #FFFFFF;
+}
+
+
+
+
+/*#footer{
+position: relative;
+bottom: 0;
+left: 0;
+height: 30px;
+width: 100%;
+background: #7CA69E;
+}*/
