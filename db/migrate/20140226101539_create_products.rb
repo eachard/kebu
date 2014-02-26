@@ -4,9 +4,10 @@ class CreateProducts < ActiveRecord::Migration
       t.string :title
       t.text :description
       t.float :price
-      t.has_attached_file :photo
 
       t.timestamps
     end
+
+    add_attachment :products, :picture
   end
 end
