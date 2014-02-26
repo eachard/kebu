@@ -12,9 +12,6 @@ end
 #cart manager 
 gem 'acts_as_shopping_cart', '~> 0.2.0'
 
-#access managment"
-gem 'pundit'
-
 #Authentification
 gem 'devise'
 
