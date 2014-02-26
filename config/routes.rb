@@ -9,7 +9,7 @@ Kebu::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'users#account'
+  root 'welcome#index'
 
   get 'account' => 'users#account'
   
