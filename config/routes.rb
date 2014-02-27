@@ -2,7 +2,11 @@ Kebu::Application.routes.draw do
 
 
 # flowers is used instead of product for the SEO, but we need to specify explicitely the controller
-  resources :flowers, only: [ :index, :show ], controller: 'products'
+# as = pour les noms des helpers, path pour les path generes par les helpers.
+  resources :products, as: :flowers, path: :flowers, only: [ :index, :show ]
+
+  post 'cart/add' => 'shopping_carts#add_item', as: 'cart_add_item'
+  get 'cart' => 'shopping_carts#show'
 
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
