@@ -1,6 +1,8 @@
 Kebu::Application.routes.draw do
 
 
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
 # flowers is used instead of product for the SEO, but we need to specify explicitely the controller
 # as = pour les noms des helpers, path pour les path generes par les helpers.
   resources :products, as: :flowers, path: :flowers, only: [ :index, :show ]
