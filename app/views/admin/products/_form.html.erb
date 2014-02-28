@@ -1,0 +1,5 @@
+<%= semantic_form_for [:admin, @product] do |f| %>
+    <%= f.inputs :title, :price, :description, :available  %>
+    <%= f.input :picture %>
+    <%= f.action :submit %>
+<% end %>
