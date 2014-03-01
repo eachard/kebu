@@ -3,16 +3,22 @@
         <div class="navbar span12">
             <div class="navbar-inner">
                 <button type="button" class="btn btn-navbar"></button>
-                <a class="brand" href="#"><img src="../common-files/img/3.png" width="100" height="100" alt=""></a>
+                                
+                <%= link_to root_path,  :class =>"brand" do %>
+                <%= image_tag("../common-files/img/3.png", size: "100x67", alt: "bouquet")%>
+                <% end %>
+
+
                 <div class="nav-collapse pull-right">
                     <ul class="nav">
-                        <li><a href="#">NOS BOUQUETS</a></li>
-                        <li><a href="#">COMMENT CA MARCHE</a></li>
-                        <li><a href="#">NOTRE HISTOIRE</a></li>
-                        <li><a href="#">CONTACT</a></li>
+                        <li><%= link_to'Nos Bouquets', page_path('flowers') %></li>
+                        <li><%= link_to'Comment ca marche', page_path('how-it-works') %></li>
+                        <li><%= link_to'Notre histoire', page_path('our-story') %></li>
+                        <li><%= link_to'A propos', page_path('about') %></li>
+                        <li><%= link_to'Nous contacter', page_path('contact') %></li>
                     </ul>
                     <form class="navbar-form pull-left">
-                        <a class="btn btn-primary" href="#">SIGN IN</a>
+                        <%= link_to 'Mon compte', new_user_session_path, :class => "btn btn-primary"%>
                     </form>
                 </div>
             </div>

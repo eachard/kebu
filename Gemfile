@@ -9,6 +9,10 @@ group :development do
   gem 'pry'
 end
 
+
+# staticpages handling
+gem 'high_voltage', '~> 2.1.0'
+
 #cart manager 
 gem 'acts_as_shopping_cart', '~> 0.2.0'
 
