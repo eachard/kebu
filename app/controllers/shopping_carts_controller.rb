@@ -8,5 +8,14 @@ class ShoppingCartsController < ApplicationController
 
   def show
     @cart = current_cart
+
+    #warning : we use subtotal because the price should be displayed with taxe included in france. To be modified.
+    @total = @cart.subtotal
   end  
+
+  def empty
+    current_cart.clear
+    redirect_to cart_path
+  end
+
 end

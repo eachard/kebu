@@ -5,10 +5,10 @@
   <% @products.each do |product| %></td>
     <div class="span4">
       <tr>
+        <td><%= link_to image_tag(product.picture.url, size: "400"), flower_path(product) %></td><br>
         <td><%=product.title%></td><br>
         <td><%=product.description%></td><br>
         <td><%=product.price%></td><br>
-        <td><%= link_to image_tag(product.picture.url, size: "400"), flower_path(product) %></td><br>
         <td><%= link_to "Voir", flower_path(product) %></td>
       </tr>
     </div>

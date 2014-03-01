@@ -11,12 +11,16 @@
 
                 <div class="nav-collapse pull-right">
                     <ul class="nav">
-                        <li><%= link_to'Nos Bouquets', page_path('flowers') %></li>
-                        <li><%= link_to'Comment ca marche', page_path('how-it-works') %></li>
-                        <li><%= link_to'Notre histoire', page_path('our-story') %></li>
-                        <li><%= link_to'A propos', page_path('about') %></li>
-                        <li><%= link_to'Nous contacter', page_path('contact') %></li>
+                        <li><%= link_to 'Nos Bouquets', page_path('flowers') %></li>
+                        <li><%= link_to 'Comment ca marche', page_path('how-it-works') %></li>
+                        <li><%= link_to 'Notre vision', page_path('our-story') %></li>
+                        <li><%= link_to 'Nous contacter', page_path('contact') %></li>
+                        <li><%= link_to (cart_path) do %>
+                        <i class="fa fa-shopping-cart"> </i>
+                            Mon Panier
+                        <% end %></li>
                     </ul>
+
                     <form class="navbar-form pull-left">
                         <%= link_to 'Mon compte', new_user_session_path, :class => "btn btn-primary"%>
                     </form>

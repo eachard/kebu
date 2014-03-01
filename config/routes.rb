@@ -9,6 +9,7 @@ Kebu::Application.routes.draw do
 
   post 'cart/add' => 'shopping_carts#add_item', as: 'cart_add_item'
   get 'cart' => 'shopping_carts#show'
+  get 'cart/empty' => 'shopping_carts#empty', as: 'clear_the_cart'
 
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
