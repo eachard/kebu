@@ -1,19 +1,15 @@
+  <h1>Des superbes bouquets</h1>
 
-
-<h1>Products#show</h1>
-
-<p> <%=@product.title%> </p>
-<p> <%=@product.description%> </p>
-<p> <%=@product.price%> </p>
-<%= image_tag(@product.picture.url, size: "400")%>
-
-
-
-<%= form_tag cart_add_item_path do %>
-  <%= hidden_field_tag :product_id, @product.id %>
+      <%= image_tag(@product.picture.url, size: "400")%>
+      <p> <%=@product.title%> </p>
+      <p> <%=@product.description%> </p>
+      <p> <%=@product.price%> </p>
+      <%= form_tag cart_add_item_path do %>
+      <%= hidden_field_tag :product_id, @product.id %>
   <div>    
-    <%= submit_tag 'Ajouter au panier', class: 'btn btn-danger' %>
-  </div>
-<% end %>
+      <%= submit_tag 'Ajouter au panier', class: 'btn btn-danger' %>
+    </div>
+  <% end %>
+</div>
 
 

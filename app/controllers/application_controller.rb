@@ -9,11 +9,11 @@ class ApplicationController < ActionController::Base
   def current_cart(options = {})
     return @current_cart unless @current_cart.nil?
 
-#si on a deja ajoute un cart en session, reserve dans rails
+  #si on a deja ajoute un cart en session, reserve dans rails
     if session[:cart_id]
       @current_cart = ShoppingCart.find(session[:cart_id])
 
-# si on passe create_if_necessary dans le hash d'option. 
+  # si on passe create_if_necessary dans le hash d'option. 
     elsif options[:create_if_necessary]
       @current_cart = ShoppingCart.create
       session[:cart_id] = @current_cart.id
