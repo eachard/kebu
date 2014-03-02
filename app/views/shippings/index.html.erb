@@ -1,0 +1,39 @@
+<h1>Listing shippings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fullname</th>
+      <th>Phone number</th>
+      <th>Address</th>
+      <th>Zipcode</th>
+      <th>Compagnie</th>
+      <th>Extra informations</th>
+      <th>City</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @shippings.each do |shipping| %>
+      <tr>
+        <td><%= shipping.fullname %></td>
+        <td><%= shipping.phone_number %></td>
+        <td><%= shipping.address %></td>
+        <td><%= shipping.zipcode %></td>
+        <td><%= shipping.compagnie %></td>
+        <td><%= shipping.extra_informations %></td>
+        <td><%= shipping.city %></td>
+        <td><%= link_to 'Show', shipping %></td>
+        <td><%= link_to 'Edit', edit_shipping_path(shipping) %></td>
+        <td><%= link_to 'Destroy', shipping, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Shipping', new_shipping_path %>

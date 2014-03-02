@@ -1,0 +1,45 @@
+<%= form_for(@shipping) do |f| %>
+  <% if @shipping.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@shipping.errors.count, "error") %> prohibited this shipping from being saved:</h2>
+
+      <ul>
+      <% @shipping.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :fullname %><br>
+    <%= f.text_field :fullname %>
+  </div>
+  <div class="field">
+    <%= f.label :compagnie, "Compagnie (optionel)" %><br>
+    <%= f.text_field :compagnie %>
+  </div>
+  <div class="field">
+    <%= f.label :phone_number %><br>
+    <%= f.number_field :phone_number %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :zipcode %><br>
+    <%= f.text_field :zipcode %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :extra_informations %><br>
+    <%= f.text_area :extra_informations %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

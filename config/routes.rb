@@ -1,6 +1,8 @@
 Kebu::Application.routes.draw do
 
 
+  resources :shippings
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 # flowers is used instead of product for the SEO, but we need to specify explicitely the controller
