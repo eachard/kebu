@@ -1,15 +1,18 @@
   <h1>Des superbes bouquets</h1>
 
+    <div>
       <%= image_tag(@product.picture.url, size: "400")%>
       <p> <%=@product.title%> </p>
       <p> <%=@product.description%> </p>
       <p> <%=@product.price%> </p>
+    </div>
+
+    <div>    
       <%= form_tag cart_add_item_path do %>
       <%= hidden_field_tag :product_id, @product.id %>
-  <div>    
       <%= submit_tag 'Ajouter au panier', class: 'btn btn-danger' %>
+      <% end %>
     </div>
-  <% end %>
-</div>
+
 
 

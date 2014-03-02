@@ -1,16 +1,14 @@
 <% if @cart.nil? %>
   <h3>Votre panier est vide</h3>
+
 <% else %>
   <% @cart.shopping_cart_items.each do |cart_item| %>
     <p><%= cart_item.item.title %></p>
     <p><%= cart_item.item.price %></p>
     <p><%= cart_item.item.description %></p>
     <p>quantite <%= cart_item.quantity %></p>
-
-  <% end %>
-
+    <% end %>
   <%= link_to "Vider le panier", clear_the_cart_path %>
-
   <p>Total : <%= @total %> </p>
 <% end %>
 
